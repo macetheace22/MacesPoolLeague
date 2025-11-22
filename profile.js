@@ -42,7 +42,7 @@ async function initAuth() {
 }
 
 async function loadProfile(uid) {
-  const { data, error } = await supabase.from('profiles').select('*').eq('id', uuid).single().maybeSingle()
+  const { data, error } = await supabase.from('profiles').select('*').eq('id', uid).single().maybeSingle()
   const el = document.getElementById('profileArea')
   if (error) { el.innerHTML = '<p class="muted">Failed to load YOUR profile.</p>'; console.error(error); return }
   const profile = data || { display_name: '', bio: '', avatar_url: '' }
