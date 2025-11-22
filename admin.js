@@ -5,7 +5,7 @@ async function initAdmin() {
   const logoutBtn = document.getElementById('logoutBtn')
   const userEmail = document.getElementById('userEmail')
 
-  loginBtn?.addEventListener('click', () => supabase.auth.signInWithOAuth({ provider: 'google' , options: { redirectTo: window.location.origin + "/profile.html" }}))
+  loginBtn?.addEventListener('click', () => supabase.auth.signInWithOAuth({ provider: 'google' , options: { redirectTo: location.origin + "MacesPoolLeague/profile.html" }}))
   logoutBtn?.addEventListener('click', async () => { await supabase.auth.signOut(); location.reload() })
 
   const { data: { user } } = await supabase.auth.getUser()
