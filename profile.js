@@ -23,7 +23,7 @@ async function initAuth() {
     userEmail.textContent = ''
     loginBtn.style.display = 'inline-block'
     logoutBtn.style.display = 'none'
-    document.getElementById('profileArea').innerHTML = '<p> class="muted">Please sign in to manage your profile.</p>'
+    document.getElementById('profileArea').innerHTML = '<p class="muted">Please sign in to manage THE profile.</p>'
   }
 
   supabase.auth.onAuthStateChange(async (_e, session) => {
@@ -36,7 +36,7 @@ async function initAuth() {
       userEmail.textContent = ''
       loginBtn.style.display = 'inline-block'
       logoutBtn.style.display = 'none'
-      document.getElementById('profileArea').innerHTML = '<p> class="muted">Please sign in to manage your profile.</p>'
+      document.getElementById('profileArea').innerHTML = '<p class="muted">Please sign in to manage BILL profile.</p>'
     }
   })
 }
