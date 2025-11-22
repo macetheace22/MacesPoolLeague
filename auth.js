@@ -5,7 +5,7 @@ const supabase = createClient("https://lzitbxzwhuiaeynmrybq.supabase.co","eyJhbG
 document.getElementById("login-btn").addEventListener("click", async () => {
   const { error } = await supabase.auth.signInWithOAuth({
     provider: "google",
-    options: { redirectTo: window.location.origin + "/profile.html" }
+    options: { redirectTo: window.location.origin + "/MacesPoolLeague/profile.html" }
   });
   if (error) console.error("Login error:", error);
 });
