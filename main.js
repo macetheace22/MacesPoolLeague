@@ -28,7 +28,7 @@ async function initAuthUI() {
   }
 
   // wire buttons
-  loginBtn?.addEventListener("click", async () => { const { error } = await supabase.auth.signInWithOAuth({provider: "google", options: { redirectTo: location.origin + "/profile.html" }});if (error) console.error("Login error:", error);});
+  loginBtn?.addEventListener("click", async () => { const { error } = await supabase.auth.signInWithOAuth({provider: "google", options: { redirectTo: location.origin + "/MacesPoolLeague/profile.html" }});if (error) console.error("Login error:", error);});
   logoutBtn?.addEventListener('click', async () => { await supabase.auth.signOut(); location.reload() })
 
   // initial
