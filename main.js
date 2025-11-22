@@ -1,6 +1,6 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-const SUPABASE_URL = 'YOUR_SUPABASE_URL'
-const SUPABASE_ANON = 'YOUR_SUPABASE_ANON_KEY'
+const SUPABASE_URL = 'https://lzitbxzwhuiaeynmrybq.supabase.co'
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6aXRieHp3aHVpYWV5bm1yeWJxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2Njg2NjcsImV4cCI6MjA3OTI0NDY2N30.5PNoFntss-iTlU0Jt6DNDV74VG8G406UVF61OLSuQb0'
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON)
 
 async function initAuthUI() {
