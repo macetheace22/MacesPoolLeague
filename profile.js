@@ -16,7 +16,7 @@ async function initAuth() {
     loginBtn.style.display = 'none'
     logoutBtn.style.display = 'inline-block'
     // check admin
-    const { data: profile } = await supabase.from('profiles').select('is_admin').eq('id', user.id).single().maybeSingle()
+    const { data: profile } = await supabase.from('profiles').select('is_admin').eq('id', user.id).single()//.maybeSingle()
     if (profile && profile.is_admin) adminLink.style.display = 'inline-block'
     loadProfile(user.id)
   } else {
@@ -42,7 +42,7 @@ async function initAuth() {
 }
 
 async function loadProfile(uid) {
-  const { data, error } = await supabase.from('profiles').select('*').eq('id', uid).single().maybeSingle()
+  const { data, error } = await supabase.from('profiles').select('*').eq('id', uid).single()//.maybeSingle()
   const el = document.getElementById('profileArea')
   if (error) { el.innerHTML = '<p class="muted">Failed to load YOUR profile.</p>'; console.error(error); return }
   const profile = data || { display_name: '', bio: '', avatar_url: '' }
