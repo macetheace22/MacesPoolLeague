@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pool League — Submit Match</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="matches.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Pool League</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">My Profile</a>
+    <a href="matches.html">Submit Match</a>
+    <a href="admin.html" id="adminLinkMatches" style="display:none">Admin</a>
+  </nav>
+  <div class="auth">
+    <span id="userEmail" class="muted"></span>
+    <button id="loginBtn">Sign in</button>
+    <button id="logoutBtn" style="display:none">Sign out</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2>Submit Match Result</h2>
+    <form id="matchForm">
+      <label>Player 1
+        <select id="player1"></select>
+      </label>
+      <label>Player 2
+        <select id="player2"></select>
+      </label>
+      <label>Player 1 Score
+        <input type="number" id="score1" min="0" value="0">
+      </label>
+      <label>Player 2 Score
+        <input type="number" id="score2" min="0" value="0">
+      </label>
+      <div style="margin-top:12px">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <div id="formMsg" class="muted"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <small>Results are verified by admins before finalization.</small>
+</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pool League — Home</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Pool League</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">My Profile</a>
+    <a href="matches.html">Submit Match</a>
+    <a href="admin.html" id="adminLink" style="display:none">Admin</a>
+  </nav>
+  <div class="auth">
+    <span id="userEmail" class="muted"></span>
+    <button id="loginBtn">Sign in</button>
+    <button id="logoutBtn" style="display:none">Sign out</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2>Standings</h2>
+    <div id="standings">Loading standings…</div>
+  </section>
+
+  <section class="panel">
+    <h2>Recent Matches</h2>
+    <div id="recentMatches">Loading matches…</div>
+  </section>
+</main>
+
+<footer class="footer">
+  <small>Built with Supabase + GitHub Pages — free hosting.</small>
+</footer>
+</body>
+</html>

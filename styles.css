@@ -1,0 +1,15 @@
+:root{--accent:#0b74de;--bg:#f6f8fb;--card:#ffffff}
+*{box-sizing:border-box}body{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:#0f1724;color:#fff}
+.topbar .brand{font-weight:700;font-size:18px}
+.topbar nav a{color:rgba(255,255,255,0.9);margin-right:12px;text-decoration:none}
+.container{max-width:980px;margin:24px auto;padding:0 16px}
+.panel{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(11,20,40,0.06);margin-bottom:16px}
+.panel h2{margin-top:0}
+.muted{color:#6b7280}
+table{width:100%;border-collapse:collapse}
+th,td{padding:8px;text-align:left;border-bottom:1px solid #e6e9ef}
+button{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
+input,select{padding:8px;border:1px solid #d1d5db;border-radius:6px;width:100%}
+.footer{max-width:980px;margin:8px auto;padding:8px 16px;text-align:center;color:#6b7280}
+@media (max-width:600px){.topbar nav{display:none}}

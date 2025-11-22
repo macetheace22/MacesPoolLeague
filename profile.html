@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pool League — Profile</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="profile.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Pool League</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">My Profile</a>
+    <a href="matches.html">Submit Match</a>
+    <a href="admin.html" id="adminLinkProfile" style="display:none">Admin</a>
+  </nav>
+  <div class="auth">
+    <span id="userEmail" class="muted"></span>
+    <button id="loginBtn">Sign in</button>
+    <button id="logoutBtn" style="display:none">Sign out</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="panel" id="profilePanel">
+    <h2>My Profile</h2>
+    <div id="profileArea">Loading…</div>
+  </section>
+</main>
+
+<footer class="footer">
+  <small>Manage your profile. Only admins can edit league data.</small>
+</footer>
+</body>
+</html>
