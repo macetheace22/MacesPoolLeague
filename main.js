@@ -28,7 +28,8 @@ async function initAuthUI() {
   }
 
   // wire buttons
-  loginBtn?.addEventListener('click', () => supabase.auth.signInWithOAuth({ provider: 'google' }))
+  loginBtn?.addEventListener("click", async () => {
+  const { error } = await supabase.auth.signInWithOAuth({provider: "google",options: { redirectTo: window.location.origin + "/profile.html" }});if (error) console.error("Login error:", error);});
   logoutBtn?.addEventListener('click', async () => { await supabase.auth.signOut(); location.reload() })
 
   // initial
@@ -39,16 +40,6 @@ async function initAuthUI() {
     await setUserState(session?.user ?? null)
   })
 }
-
-
-
-document.getElementById("login-btn").addEventListener("click", async () => {
-  const { error } = await supabase.auth.signInWithOAuth({
-    provider: "google",
-    options: { redirectTo: window.location.origin + "/profile.html" }
-  });
-  if (error) console.error("Login error:", error);
-});
 
 import { NextResponse } from "next/server";
 ...
