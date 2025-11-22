@@ -28,8 +28,7 @@ async function initAuthUI() {
   }
 
   // wire buttons
-  loginBtn?.addEventListener("click", async () => {
-  const { error } = await supabase.auth.signInWithOAuth({provider: "google",options: { redirectTo: window.location.origin + "/profile.html" }});if (error) console.error("Login error:", error);});
+  loginBtn?.addEventListener("click", async () => { const { error } = await supabase.auth.signInWithOAuth({provider: "google", options: { redirectTo: location.origin + "/profile.html" }});if (error) console.error("Login error:", error);});
   logoutBtn?.addEventListener('click', async () => { await supabase.auth.signOut(); location.reload() })
 
   // initial
@@ -41,14 +40,12 @@ async function initAuthUI() {
   })
 }
 
-import { NextResponse } from "next/server";
-...
-const { data } = await supabase.auth.signInWithOAuth({
-  provider: 'google',
-})
-return NextResponse.redirect(data.url)
-
-
+//import { NextResponse } from "next/server";
+//...
+//const { data } = await supabase.auth.signInWithOAuth({
+//  provider: 'google',
+//})
+//return NextResponse.redirect(data.url)
 
 async function loadStandings() {
   const { data, error } = await supabase.from('standings').select('*')
