@@ -5,7 +5,7 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 // window.__SUPABASE_URL and window.__SUPABASE_ANON_KEY in the HTML before this module loads.
 // In production, put the anon key into your hosting provider's environment variables.
 const SUPABASE_URL = window.__SUPABASE_URL || 'https://lzitbxzwhuiaeynmrybq.supabase.co'
-const SUPABASE_ANON = window.__SUPABASE_ANON_KEY || ''
+const SUPABASE_ANON = window.__SUPABASE_ANON_KEY || 'sb_publishable_P4-bBjxsrSsMGn-Pr_89yA_FqPnOek-'
 
 if (!SUPABASE_ANON) {
   console.error('Supabase anon key not provided. Set window.__SUPABASE_ANON_KEY or use an env-based build.')
