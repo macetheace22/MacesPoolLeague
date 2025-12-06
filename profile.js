@@ -6,9 +6,9 @@ async function initAuth() {
   const userEmail = document.getElementById('userEmail')
   const adminLink = document.getElementById('adminLinkProfile')
 
-  //loginBtn?.addEventListener('click', () => supabase.auth.signInWithOAuth({ provider: 'google' }))
-  loginBtn?.addEventListener("click", async () => { const { error } = await supabase.auth.signInWithOAuth({provider: "google", options: { redirectTo: location.origin  + "/MacesPoolLeague/profile.html"}});if (error) console.error("Login error:", error);});
-  logoutBtn?.addEventListener('click', async () => { await supabase.auth.signOut(); location.reload() })
+  loginBtn?.addEventListener('click', () => supabase.auth.signInWithOAuth({ provider: 'google' }))
+ // loginBtn?.addEventListener("click", async () => { const { error } = await supabase.auth.signInWithOAuth({provider: "google", options: { redirectTo: location.origin  + "/MacesPoolLeague/profile.html"}});if (error) console.error("Login error:", error);});
+  //logoutBtn?.addEventListener('click', async () => { await supabase.auth.signOut(); location.reload() })
 
   const { data: { user } } = await supabase.auth.getUser()
   if (user) {
