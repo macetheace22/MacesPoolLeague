@@ -5,8 +5,7 @@ async function initAdmin() {
   const logoutBtn = document.getElementById('logoutBtn')
   const userEmail = document.getElementById('userEmail')
 
-  //loginBtn?.addEventListener('click', () => supabase.auth.signInWithOAuth({ provider: 'google' , options: { redirectTo: location.origin + "MacesPoolLeague/profile.html" }}))
-  loginBtn?.addEventListener("click", async () => { const { error } = await supabase.auth.signInWithOAuth({provider: "google", options: { redirectTo: location.origin + "/MacesPoolLeague/profile.html" }});if (error) console.error("Login error:", error);});
+  loginBtn?.addEventListener('click', () => supabase.auth.signInWithOAuth({ provider: 'google' }))
   logoutBtn?.addEventListener('click', async () => { await supabase.auth.signOut(); location.reload() })
 
   const { data: { user } } = await supabase.auth.getUser()
